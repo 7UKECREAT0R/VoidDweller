@@ -1,0 +1,346 @@
+print "[color: dark purple]VoidDweller by lukecreator [color: reset]- [color: gold, bold]8K Add-On Jam"
+print "[color: bold]Written in MCCompiled $compilerversion."
+
+feature exploders
+
+function install {
+    define int voidMessage
+    define int voidLeaveMessage
+    define int nextAttackSound
+    define int nextItemTick
+}
+
+$macro command_feedback boolean {
+    mc "gamerule sendcommandfeedback $boolean"
+}
+
+// modded items
+$var item_parasite "voiddweller:sapping_parasite"
+$var item_chunk "voiddweller:pernicious_chunk"
+$var item_gunpowder "voiddweller:corrupted_gunpowder"
+$var item_feather "voiddweller:voidish_feather"
+$var item_skull "voiddweller:shattered_skull"
+// names of modded items (for detecting on ground)
+$var item_chunk_name "§dPernicious Chunk"
+$var item_gunpowder_name "§dCorrupted Gunpowder"
+$var item_skull_name "§dShattered Skull"
+
+// definitions
+$var voidlingSound "block.end_portal.spawn"
+$var teleportX 25
+$var teleportZ -25
+
+function @e kill_all_voidlings {
+    if tag "voidling"
+        kill
+}
+function @e kill_all_items {
+    if type "item"
+        kill
+}
+function void_welcome_message {
+
+    init voidMessage
+    actionbar times 0s 5s 0s
+
+    if voidMessage == 0
+        actionbar "[color: dark purple, bold]  The Void consumes you  "
+    if voidMessage == 1
+        actionbar "[color: dark purple, bold]  Embrace the warmth  "
+    if voidMessage == 2
+        actionbar "[color: dark purple, bold]  Welcome back  "
+    if voidMessage == 3
+        actionbar "[color: dark purple, bold]  Let it consume you  "
+    if voidMessage == 4
+        actionbar "[color: dark purple, bold]  Spread the warmth  "
+    if voidMessage == 5
+        actionbar "[color: dark purple, bold]  Stay for a while  "
+    if voidMessage == 6
+        actionbar "[color: dark purple, bold]  Keep away from the light  "
+    if voidMessage == 7
+        actionbar "[color: dark purple, bold]  Take them all with you  "
+    if voidMessage == 8
+        actionbar "[color: dark purple, bold]  We've been waiting  "
+    
+    voidMessage += 1
+
+    if voidMessage > 8
+        voidMessage = 0
+}
+function void_leave_message {
+
+    init voidLeaveMessage
+    actionbar times 0s 5s 0s
+
+    if voidLeaveMessage == 0
+        actionbar "[color: white, bold]  You have been cleansed  "
+    if voidLeaveMessage == 1
+        actionbar "[color: white, bold]  Returned  "
+    if voidLeaveMessage == 2
+        actionbar "[color: white, bold]  Back to the real  "
+    if voidLeaveMessage == 3
+        actionbar "[color: white, bold]  Gone so soon?  "
+    if voidLeaveMessage == 4
+        actionbar "[color: white, bold]  You can't leave forever  "
+    if voidLeaveMessage == 5
+        actionbar "[color: white, bold]  Good to be clean  "
+    if voidLeaveMessage == 6
+        actionbar "[color: white, bold]  The sap evaporates  "
+    if voidLeaveMessage == 7
+        actionbar "[color: white, bold]  Reality once more  "
+    if voidLeaveMessage == 8
+        actionbar "[color: white, bold]  Horrors reversed  "
+
+    voidLeaveMessage += 1
+
+    if voidLeaveMessage > 8
+        voidLeaveMessage = 0
+}
+function voidling_roar_sound {
+    define int roarSound
+    mc "scoreboard players random @s roarSound 0 3"
+
+    if roarSound == 0
+        mc "playsound mob.ghast.death @a ~ ~ ~ 1 0.15"
+    if roarSound == 1
+        mc "playsound mob.ghast.death @a ~ ~ ~ 1 0.20"
+    if roarSound == 2
+        mc "playsound mob.ghast.death @a ~ ~ ~ 1 0.25"
+    if roarSound == 3
+        mc "playsound mob.ghast.death @a ~ ~ ~ 1 0.30"
+}
+function voidling_attack_sound {
+    mc "scoreboard players add @s \"nextAttackSound\" 0"
+
+    if nextAttackSound < 1 {
+        define int attackSound
+        mc "scoreboard players random @s attackSound 0 3"
+
+        if attackSound == 0
+            mc "playsound mob.wither.hurt @a ~ ~ ~ 1 0.56"
+        if attackSound == 1
+            mc "playsound mob.wither.hurt @a ~ ~ ~ 1 0.6"
+        if attackSound == 2
+            mc "playsound mob.wither.hurt @a ~ ~ ~ 1 0.65"
+        if attackSound == 3
+            mc "playsound mob.wither.hurt @a ~ ~ ~ 1 0.7"
+        
+        nextAttackSound = 10
+    }
+}
+
+// turn player into a voidling
+function voidling_spawn {
+    tag add "falling_voidling"
+    tp (~ + $teleportX) 300 (~ + $teleportZ)
+    mc "effect @s resistance 20 255 true"
+    
+    $macro command_feedback false
+    void_welcome_message()
+    $macro command_feedback true
+}
+// turn voidling back to normal player
+function voidling_reverse {
+    mc "fog @s pop void"
+    tag remove "voidling"
+    tag remove "falling_voidling"
+    effect clear
+
+    mc "playsound mob.ghast.death @a ~~~ 1 0.6"
+    mc "summon lightning_bolt"
+
+    $macro command_feedback false
+    void_leave_message()
+    $macro command_feedback true
+}
+function infect_this_entity {
+    voidling_roar_sound()
+    mc "event entity @s infect_void"
+    tag add "voidling"
+}
+function void_pillar_activate {
+    // destroy pillar + sound
+    mc "playsound mob.blaze.death @a ~ ~ ~ 2 0.8"
+    fill destroy "air" ~ -64 ~ ~ 256 ~
+
+    // pillar particle effect
+    $repeat 20 i {
+        $var copy ($i - 10)
+        $div copy 2.1
+        mc "particle minecraft:blue_flame_particle ~-0.3 ~$copy ~-0.3"
+        mc "particle minecraft:blue_flame_particle ~-0.3 ~$copy ~0.3"
+        mc "particle minecraft:blue_flame_particle ~0.3 ~$copy ~-0.3"
+        mc "particle minecraft:blue_flame_particle ~0.3 ~$copy ~0.3"
+    }
+}
+
+function tick_parasite {
+    if any @e[family=mob,type=!player,r=2.5]
+        effect regeneration 1 2
+    
+    // parasite cannot be activated from ground
+    for @e[family=mob,type=!player,r=2.5] {
+        mc "damage @s 1 void entity @p"
+        mc "playsound random.drink_honey @a ~ ~ ~ 0.8 0.7"
+    }
+}
+function tick_gunpowder {
+    for @e[family=monster,r=10] {
+        explode ~ ~ ~ 1 0 false false
+    }
+
+    if any @e[family=monster,r=10] {
+        if type player {
+            clear @s $item_gunpowder -1 1
+            actionbar times 0 0.5s 0
+            actionbar "[color:dark purple]Used 1x [color: pink]Corrupted Gunpowder"
+        }
+        if type item
+            kill
+    }
+}
+function tick_skull {
+    
+    if type player {
+        for @e[family=skeleton,r=6] {
+            mc "playsound mob.wither.break_block @a ~ ~ ~ 0.5 1"
+            mc "damage @s 3 none entity @p"
+        }
+    }
+    if type item {
+        for @e[family=skeleton,r=6] {
+            mc "playsound mob.wither.break_block @a ~ ~ ~ 0.5 1"
+            mc "damage @s 3 none entity @e[c=1,type=item,name=\"$item_skull_name\"]"
+        }
+    }
+}
+function tick_chunk {
+    for @e[tag=!voidling,r=5] {
+        effect fatal_poison 2 2
+    }
+}
+
+// performs operations relating to all void items
+function tick_void_items_player {
+
+    if item $item_parasite
+        tick_parasite()
+
+    if item $item_feather
+        effect slow_falling 2 1
+
+    if item $item_gunpowder
+        tick_gunpowder()
+
+    if item $item_skull
+        tick_skull()
+
+    if item $item_chunk
+        tick_chunk()
+}
+// performs operations relating to all void items
+function tick_void_items_drops {
+
+    if name $item_chunk_name
+        tick_chunk()
+    
+    if name $item_gunpowder_name
+        tick_gunpowder()
+
+    if name $item_skull_name
+        tick_skull()
+}
+
+function tick_voidling {
+
+    // cancel all wither effects
+    mc "effect @s wither 0 0 true"
+
+    // infect nearby entities
+    select @e
+    if not tag "voidling" & near ~ ~ ~ 3 {
+        if family "voidable"
+            infect_this_entity()
+        else {
+            if family "mob" {
+                mc "particle minecraft:obsidian_tear_particle ~ ~1.5 ~"
+                mc "damage @s 2 void entity @e[tag=\"voidling\",c=1]"
+                voidling_attack_sound()
+            }
+            if type "player" {
+                mc "particle minecraft:obsidian_tear_particle ~ ~1.5 ~"
+                mc "damage @s 2 void entity @e[tag=\"voidling\",c=1]"
+                voidling_attack_sound()
+            }
+        }
+    }
+}
+function tick_voidling_player {
+
+    // effects
+    mc "effect @s resistance 10 0 true"
+    mc "effect @s speed 10 0 true"
+    mc "effect @s jump_boost 10 0 true"
+
+    // particles
+    mc "particle minecraft:falling_dust_dragon_egg_particle ~0.5 ~0.3 ~"
+    mc "particle minecraft:falling_dust_dragon_egg_particle ~-0.5 ~0.3 ~-0.5"
+    mc "particle minecraft:falling_dust_dragon_egg_particle ~-0.5 ~0.3 ~0.5"
+
+    // transform back into player
+    if block ~ ~-1 ~ beacon
+        voidling_reverse()
+
+    // trail of void grass
+    if block ~ ~-1 ~ grass
+        block "voiddweller:void_grass" ~ ~-1 ~
+
+    // default
+    tick_voidling()
+}
+
+function tick {
+    install()
+
+    select @a
+
+    // falling_voidling -> voidling transformation
+    if tag "falling_voidling" {
+        if not block ~ ~-1 ~ air {
+            tag add "voidling"
+            tag remove "falling_voidling"
+            mc "fog @s pop void"
+            mc "fog @s push voiddweller:fog_void void"
+            mc "playsound $voidlingSound @a ~ ~ ~ 100 0.7 100"
+            explode ~ ~ ~ 1 0 false true
+        }
+    }
+
+    // voidling behavior
+    select @e
+    if tag "voidling" {
+        if type player
+            tick_voidling_player() // only do effects/particles for the player
+        else
+            tick_voidling() // simple spread/damage for entities.
+    }
+
+    // tick void items every half second
+    nextItemTick -= 1
+    if nextItemTick <= 0 {
+        nextItemTick = 0.5s
+
+        if type player
+            tick_void_items_player()
+        if type item
+            tick_void_items_drops()
+    }
+    
+    // sound cooldowns
+    nextAttackSound -= 1
+
+    // turn player into voidling
+    select @a
+    if position y < -100
+        voidling_spawn()
+}
