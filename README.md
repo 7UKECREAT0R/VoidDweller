@@ -16,7 +16,7 @@ The jam theme is "into the cosmos," but I wanted to expand beyond the idea of pl
 VoidDweller adds post-wither content to survival worlds by introducing a new variety of extremely powerful loot and effects. Withers now drop both Nether Stars and Void Stars, the latter of which can be used to craft a Void Pylon, allowing entry to the void. Entering the void blasts you out from the sky as a voidling.
 
 #### Void Mobs
-Voidlings can infect other mobs near them that are susceptible to the void, mutilating them in many different ways. Every void-variant mob has powerful custom drops, enabling tons of new gameplay styles and abilities. Void mobs deal massive void damage to anything near that is insusceptible to the void. Stepping on a beacon will immediately cleanse you.
+Voidlings can infect other mobs near them that are susceptible to the void, mutilating them in many different ways. Every void-variant mob has powerful custom drops, enabling lots of new gameplay. Void mobs deal massive void damage to anything near that is insusceptible to the void. Stepping on a beacon will immediately cleanse you.
 
 # Content
 #### Stuff
