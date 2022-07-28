@@ -1,7 +1,7 @@
 ![banner](https://user-images.githubusercontent.com/43343249/181397047-4c1864fb-1958-4cbc-90f4-1051ea863e1b.png)
 
 ### Addon for the Bedrock Addons 8K Jam!
-The jam theme is "into the cosmos," but I wanted to expand beyond the idea of planets. The minecraft cosmos, unlike the real world, is split between two sides; the overworld and the void. I decided to expand the void since it was a... uh... bit of a boring place!
+The jam theme is "into the cosmos," but I wanted to expand beyond the idea of planets. The minecraft cosmos, unlike the real world, is split between two sides; the overworld and the void. I decided to work on the void.
 
 # [Releases Page](https://github.com/7UKECREAT0R/VoidDweller/releases)
 > **Warning**
