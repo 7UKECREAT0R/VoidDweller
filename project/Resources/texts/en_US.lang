@@ -1,0 +1,18 @@
+﻿## Items
+item.voiddweller:mangled_meat.name=§5Mangled Meat
+item.voiddweller:bone_shards.name=Bone Shards
+item.voiddweller:void_star.name=§5Void Star
+item.voiddweller:void_coal=§5Void Coal
+item.voiddweller:withering_milk.name=§5Withering Milk
+item.voiddweller:voidish_feather.name=§dVoidish Feather
+item.voiddweller:sapping_parasite.name=§dSapping Parasite
+item.voiddweller:shattered_skull.name=§dShattered Skull
+item.voiddweller:corrupted_gunpowder.name=§dCorrupted Gunpowder
+item.voiddweller:pernicious_chunk.name=§dPernicious Chunk
+
+## Blocks
+tile.voiddweller:nebula_wool.name=§dNebulous Wool
+tile.voiddweller:void_pylon.name=§5Void Pylon
+tile.voiddweller:void_grass.name=§5Void Grass
+tile.voiddweller:void_block.name=§5Void
+tile.voiddweller:void_block_glowing.name=§5Glowing Void

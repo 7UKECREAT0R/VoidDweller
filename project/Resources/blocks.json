@@ -1,0 +1,31 @@
+{
+  "format_version": [ 1, 1, 0 ],
+  "voiddweller:nebula_wool": {
+    "textures": "nebulawool",
+    "sound": "cloth"
+  },
+  "voiddweller:void_block": {
+    "textures": "voidblack",
+    "sound": "metal"
+  },
+  "voiddweller:void_block_glowing": {
+    "textures": "voidwhite",
+    "sound": "metal"
+  },
+  "voiddweller:void_pylon": {
+    "textures": {
+      "up": "voidpylontop",
+      "down": "voidpylontop",
+      "side": "voidpylonsides"
+    },
+    "sound": "lodestone"
+  },
+  "voiddweller:void_grass": {
+    "textures": {
+      "up": "voidgrasstop",
+      "down": "voidgrasstop",
+      "side": "voidgrasssides"
+    },
+    "sound": "grass"
+  }
+}

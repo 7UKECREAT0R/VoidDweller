@@ -1,0 +1,12 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "voiddweller:bone_shards"
+    },
+    "components": {
+      "minecraft:icon": "bone_shards",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "voiddweller:pernicious_chunk"
+    },
+    "components": {
+      "minecraft:icon": "chunk",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

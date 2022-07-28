@@ -1,0 +1,12 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "voiddweller:corrupted_gunpowder"
+    },
+    "components": {
+      "minecraft:icon": "corrupted_gunpowder",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

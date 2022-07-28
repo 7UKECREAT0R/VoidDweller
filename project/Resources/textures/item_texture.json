@@ -1,0 +1,36 @@
+{
+  "resource_pack_name": "voiddweller",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "mangled_meat": {
+      "textures": "textures/items/mangled_meat"
+    },
+    "bone_shards": {
+      "textures": "textures/items/bone_shards"
+    },
+    "void_star": {
+      "textures": "textures/items/void_star"
+    },
+    "void_coal": {
+      "textures": "textures/items/void_coal"
+    },
+    "withering_milk": {
+      "textures": "textures/items/bucket_withering_milk"
+    },
+    "voidish_feather": {
+      "textures": "textures/items/voidish_feather"
+    },
+    "leech": {
+      "textures": "textures/items/leech"
+    },
+    "shattered_skull": {
+      "textures": "textures/items/shattered_skull"
+    },
+    "corrupted_gunpowder": {
+      "textures": "textures/items/corrupted_gunpowder"
+    },
+    "chunk": {
+      "textures": "textures/items/chunk"
+    }
+  }
+}
