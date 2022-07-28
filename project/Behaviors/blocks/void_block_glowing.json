@@ -1,0 +1,19 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "voiddweller:void_block_glowing"
+    },
+    "components": {
+      "minecraft:destroy_time": 0.5,
+      "minecraft:explosion_resistance": 1.0,
+      "minecraft:friction": 0.6,
+      "minecraft:map_color": "#FFFFFF",
+      "minecraft:block_light_emission": 1.0,
+
+      "minecraft:creative_category": {
+        "category": "construction"
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:bone",
+          "weight": 9
+        },
+        {
+          "type": "item",
+          "name": "minecraft:coal",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:skull",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_data",
+              "data": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "author": "Unknown Author",
+              "title": "18-2-59",
+              "pages": [
+                "[18-2-59 CPA v47.0]\n[Attempt to translate...]\nSeven researchers threw themselves into the void today, all of which fell from the sky. We retrieved them all as Wither Skeletons. Whatever the hell is happening, it's happening fast. Nobody on this island is",
+                "going to live if this chaos continues. Maybe it can't be stopped, I-I don't know anymore. I know the Wither is behind this, but it continues to be too powerful to even touch. Withering penetrates any and all armor we have, and the closest combat brewery is",
+                "weeks away. We sent a letter to them, the only objective now is to hold out until then.\n[End of Transcript]",
+                "[19-2-59 CPA v47.0]\nFifty-seven people yesterday went into the void. And we're not talking, you know--some mindless zombie trying to break past our barriers. These are the smartest people in the [Expletive] world; they know what the want and exactly how to",
+                "get to it. Screw the stupid potions, it's not going to happen in time. I don't even know if a Wither is vulnerable to that kind of thing. We placed an order for an entire shulker of obsidian, set to be delivered in three days. The idea is to surround the",
+                "island in four towering nether portals; a full 319 by 201 area. Everything that tries to leave will end up there and burn.\n[End of Transcript]"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

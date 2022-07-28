@@ -1,0 +1,21 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "voiddweller:void_block",
+      "is_experimental": true,
+      "register_to_creative_menu": true
+    },
+    "components": {
+      "minecraft:destroy_time": 0.5,
+      "minecraft:explosion_resistance": 1.0,
+      "minecraft:friction": 0.6,
+      "minecraft:map_color": "#541978",
+      "minecraft:block_light_emission": 0.1,
+
+      "minecraft:creative_category": {
+        "category": "construction"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "voiddweller:mangled_meat",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "author": "Unknown Author",
+              "title": "40-1-59",
+              "pages": [
+                "[40-1-59 CPA v45.3]\n[Attempt to translate...]\nAs of today, we have designated these new mobs as \"void\" creatures. A search squad was sent out to capture one, most of which were violently burned and melted during the endeavor.",
+                "At the very least, we have one in the lab to study. This one is a cow, with the same mutations of the sheep as described by Patient V.",
+                "The void cow's utters and lower-body have been mutilated beyond recognition, it's eyeballs have rotted away, and it's sockets have conjoined, leaving just one empty cavity on the skull.",
+                "I cannot begin to imagine the overwhelming pain that this... creature is experiencing, and yet... It behaves as if nothing is wrong.\n[End of Transcript]",
+                "[41-1-59 CPA v46.0]\nFish appear to be held to the same standard as some other mobs when it comes to what we're now calling \"void energy,\" meaning that we are safe from needing to contain void creatures beyond a certain extent. It's curious, really.",
+                "Some mobs are immediately overtaken, and some are affected similarly to humans, experiencing an incredible vacuum effect causing boils and bleeding. The only  relation we can make to the \"infection\" of mobs is the amount of time they've been in the world.",
+                "So far, we have been able to spread void energy to four distinct passive mobs: Cow, Sheep, Pig, and Chicken. All of which are the oldest creatures in our worlds. We have yet to test on hostiles.\n[End of Transcript]"
+              ]
+            }
+          ] 
+        }
+      ]
+    }
+  ]
+}

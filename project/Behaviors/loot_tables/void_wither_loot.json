@@ -1,0 +1,41 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 7,
+        "max": 12
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "voiddweller:void_star",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "minecraft:nether_star",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "author": "Unknown Author",
+              "title": "20-2-59",
+              "pages": [
+                "[20-2-59 CPA v47.0]\n[Attempt to translate...]\nForty-three casualties yesterday. Something is speaking inside my head, I can't make out what it's saying, and it's terrifying. The sensation is like an--intelligent tinnitus that can't leave me alone;",
+                "it doesn't even care. I can't believe it's come to this.\n[End of Transcript]",
+                "[21-2-59 CPA v47.0]\nThe voice is now clear, everybody in the laboratory is commenting on it now. We've tried everything to kill the Wither, to no avail. It looked straight at me and talked. I heard every word: ",
+                "\"You can't fight back, let us take over. Jump in.\" I just want to give up and obey, but, ...no. Tomorrow is the day.\n[End of Transcript]",
+                "[22-2-59 CPA v47.0]\nConstruction has been completed,  we can go home now.\n[End of Transcript]"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

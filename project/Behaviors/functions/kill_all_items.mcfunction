@@ -1,0 +1,1 @@
+execute @e ~ ~ ~ execute @s[type=item] ~ ~ ~ kill @s

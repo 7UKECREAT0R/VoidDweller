@@ -1,0 +1,34 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 0,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "voiddweller:corrupted_gunpowder",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "author": "Unknown Author",
+              "title": "48-1-59",
+              "pages": [
+                "[48-1-59 CPA v46.1]\n[Attempt to translate...]\nUpon being infected, Creepers lose their bumpy form and turn--almost smooth. Their explosive mechanisms immediately become the opposite of what they once were. Rather than being controlled and precise, the",
+                "explosive mechanism becomes spontaneous and random, causing creepers to be much more unstable than they were previously. After death, the gunpowder dropped from a Void Creeper is safe to touch, though any additional mobs that draw near are immediately",
+                "obliterated by a massive explosion. The damage to the warehouse must be repaired before experiments continue.\n[End of Transcript]"
+              ]
+            }
+          ] 
+        }
+      ]
+    }
+  ]
+}

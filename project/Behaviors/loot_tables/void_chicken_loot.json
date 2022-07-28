@@ -1,0 +1,49 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 0,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "voiddweller:mangled_meat",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "voiddweller:voidish_feather",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_lore",
+              "lore": [
+                "Grants slow falling",
+                "whilst in inventory."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "author": "Unknown Author",
+              "title": "45-1-59",
+              "pages": [
+                "[45-1-59 CPA v46.0]\n[Attempt to translate...]\nOngoing attempts to study void creatures repeatedly come up with nothing. The only thing we can scientifically pull from this--anomaly--is what we can see with our own eyes. We rebooted the mob farm today,",
+                "trying to grab one of each known species pertaining to the darkness family. Research will continue in the morning, though it's been tough to sleep at all in the past few days.",
+                "Three days ago, security apprehended two researchers trying to throw themselves into the void. I don't quite know what to make of it... Did their curiosity get the best of them or is something going seriously bad here? Regardless, I've made the conscious",
+                "decision to not stay around any void creatures for too long. For my own sake.\n[End of Transcript]"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

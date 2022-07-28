@@ -1,0 +1,24 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "§5Dive into the void, unfolding the power and mystery surrounding it.\n§l§6Bedrock 8K Add-On Jam",
+    "name": "VoidDweller",
+    "uuid": "bb4c7a8e-29c1-4105-bb14-9bc0387368bb",
+    "version": [ 1, 0, 0 ],
+    "min_engine_version": [ 1, 19, 0 ]
+  },
+  "modules": [
+    {
+      "description": "VoidDweller Data",
+      "type": "data",
+      "uuid": "88c580b4-ba37-4375-8f43-a2b087acfdd8",
+      "version": [ 1, 0, 0 ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "60a839af-2615-472d-b9aa-9799e921b1a1",
+      "version": [ 1, 0, 0 ]
+    }
+  ]
+}

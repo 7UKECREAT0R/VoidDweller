@@ -1,0 +1,59 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:bone",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "voiddweller:void_coal",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "voiddweller:shattered_skull",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_lore",
+              "lore": [
+                "Shatters nearby skeletons",
+                "whilst in inventory."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "author": "Unknown Author",
+              "title": "15-2-59",
+              "pages": [
+                "[15-2-59 CPA v46.8]\n[Attempt to translate...]\nThe Skeleton. We begun to take vitals once the void had taken one over, but by the time we had, it had... completely transformed. The bones had begun to char and crumble.",
+                "Eventually, all of the void energy had completely left the skeleton, though we didn't believe it was a skeleton any longer. It was entirely black, and still affected everything near it, just in a different way.",
+                "The team decided to call this new type of Skeleton a \"Wither Skeleton\" due to the nature of how it withered and burned.\n[End of Transcript]",
+                "[16-2-59 CPA v46.8]\nThrough a second attempt, we managed to \"re-charge\" a Wither Skeleton with void energy again. It seems as though the vacuum of void energy cancels the effects of Withering.",
+                "Tomorrow we will test how the Wither Skeletons interact with each other.\n[End of Transcript]",
+                "[17-2-59 CPA v47.0]\nAfter forming two new Wither Skeletons, they did not act any out of the ordinary. They simply existed with each other. We released a void creature in, charging the two skeletons. They sort-of merged together into one, flinging withering",
+                "spores everywhere. We quickly dispatched of the creature. Attempt number two consisted of three Wither Skeletons. After being recharged, all three Skeletons began to conjoin together forming a creature I cannot even begin to explain.",
+                "It's trapped inside the test chamber, but it wants out. We deemed it a \"Wither,\" since four Wither Skeletons yielded no result other than the merging into two half-Withers. Three seems to be the prime number here.",
+                "Tests with partial bodies of Wither Skeletons have yet to be authorized.\n[End of Transcript]"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

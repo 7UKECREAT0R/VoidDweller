@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "voiddweller:create_void_pylon"
+    },
+    "tags": [ "crafting_table" ],
+    "priority": 0,
+
+    "key": {
+      "S": "minecraft:stone",
+      "V": "voiddweller:void_star"
+    },
+    "pattern": [
+      "SSS",
+      "SVS",
+      "SSS"
+    ],
+
+    "result": "voiddweller:void_pylon"
+  }
+}

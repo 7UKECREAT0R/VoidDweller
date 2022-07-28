@@ -1,0 +1,1 @@
+summon voiddweller:exploder ~ ~ ~ "explode_1_0_nofire_nobreak"

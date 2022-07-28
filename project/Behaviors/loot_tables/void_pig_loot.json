@@ -1,0 +1,37 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "voiddweller:mangled_meat",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "author": "Unknown Author",
+              "title": "34-1-59",
+              "pages": [
+                "[34-1-59 CPA v45.2]\n[Attempt to translate...]\nMy name is Quincy Hathson, working for the Ender Corporation, the date is 34-1-59. We have been working steadily on the mass excavation of bedrock as part of Project Under. This set of audio logs is to be used",
+                "as a record for everything we find. Somebody fell in today; the on-site guys described the incident as a couple of seconds of awe, followed by a bright, deep-purple flash causing the subject to immediately disappear.",
+                "A couple of seconds later, half the island was shook by a massive impact. Something happened there, I just have to find out what.\n[End of Transcript]",
+                "[36-1-59 CPA v45.3]\nI was sent out with Expedition Team Zeta today to investigate the source of the impact. Not even fifty feet from the laboratory, we discovered a massive crater, about twice the size of a Creeper's detonation. Something was different",
+                "about it. The ground had transformed, as if the molecules themselves had completely recomposed into a new substance. It is colored dark purple, and moves actively. There isn't a single living cell in the block, but yet the composition looks entirely alive.",
+                "It's physically the opposite of life, but yet it seems living. We have never seen this block before in our 160 years of research.\n[End of Transcript]"
+              ]
+            }
+          ] 
+        }
+      ]
+    }
+  ]
+}

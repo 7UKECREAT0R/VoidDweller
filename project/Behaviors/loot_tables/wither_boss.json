@@ -1,0 +1,20 @@
+{
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:nether_star",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "voiddweller:void_star",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}
+                    

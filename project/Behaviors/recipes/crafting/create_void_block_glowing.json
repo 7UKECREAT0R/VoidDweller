@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "voiddweller:create_void_block_glowing"
+    },
+    "tags": [ "crafting_table" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "voiddweller:void_block"
+      },
+      {
+        "item": "minecraft:glow_ink_sac"
+      }
+    ],
+    "result": "voiddweller:void_block_glowing"
+  }
+}

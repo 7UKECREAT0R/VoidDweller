@@ -1,0 +1,88 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "voiddweller:exploder",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "animations": {},
+      "scripts": {
+        "animate": []
+      }
+    },
+    "component_groups": {
+      "properties_1_0_nofire_nobreak": {
+        "minecraft:explode": {
+          "breaks_blocks": false,
+          "causes_fire": false,
+          "destroy_affected_by_griefing": false,
+          "fire_affected_by_griefing": false,
+          "fuse_lit": true,
+          "power": 1,
+          "fuse_length": 0.0
+        }
+      },
+      "properties_1_0_nofire_break": {
+        "minecraft:explode": {
+          "breaks_blocks": true,
+          "causes_fire": false,
+          "destroy_affected_by_griefing": false,
+          "fire_affected_by_griefing": false,
+          "fuse_lit": true,
+          "power": 1,
+          "fuse_length": 0.0
+        }
+      }
+    },
+    "components": {
+      "minecraft:custom_hit_test": {
+        "hitboxes": [
+          {
+            "pivot": [
+              0,
+              100,
+              0
+            ],
+            "width": 0,
+            "height": 0
+          }
+        ]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "damage_modifier": 1.0,
+            "damage_multiplier": 0.0,
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:collision_box": {
+        "width": 0.0001,
+        "height": 0.0001
+      }
+    },
+    "events": {
+      "explode_1_0_nofire_nobreak": {
+        "add": {
+          "component_groups": [
+            "properties_1_0_nofire_nobreak"
+          ]
+        }
+      },
+      "explode_1_0_nofire_break": {
+        "add": {
+          "component_groups": [
+            "properties_1_0_nofire_break"
+          ]
+        }
+      }
+    }
+  }
+}

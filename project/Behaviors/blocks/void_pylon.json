@@ -1,0 +1,45 @@
+
+{
+  "format_version": "1.12.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "voiddweller:void_pylon",
+      "is_experimental": true,
+      "register_to_creative_menu": true
+    },
+    "components": {
+      "minecraft:destroy_time": 2.5,
+      "minecraft:explosion_resistance": 999.0,
+      "minecraft:friction": 0.6,
+      "minecraft:map_color": "#7E15BF",
+      "minecraft:block_light_emission": 0.5,
+
+      "minecraft:on_interact": {
+        "event": "activate_pillar",
+        "target": "self"
+      },
+      "minecraft:creative_category": {
+        "category": "items"
+      }
+    },
+    "events": {
+      "activate_pillar": {
+        "sequence": [
+          {
+            "set_block": {
+              "block_type": "air"
+            }
+          },
+          {
+            "run_command": {
+              "command": [
+                "function void_pillar_activate"
+              ],
+              "target": "self"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

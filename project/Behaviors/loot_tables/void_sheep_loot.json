@@ -1,0 +1,44 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "voiddweller:mangled_meat",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "voiddweller:nebula_wool",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "author": "Unknown Author",
+              "title": "37-1-59",
+              "pages": [
+                "[37-1-59 CPA v45.3]\n[Attempt to translate...]\nA couple days after the void incident, a scout supposedly ran into a group of--creatures about a mile from the laboratory. He crawled back to the lab covered in welts and burns, as if his skin began to",
+                "collapse under some kind of vaccum. The pain he is experiencing was graded as a nine out of ten, and his muscles have been continuously convulsing. We have him under spider-eye based sedatives to try and ease the pain, but the wounds are not healing.",
+                "Whatever he found, it sure messed him the hell up. \n[End of Transcript]",
+                "[38-1-59 CPA v45.3]\nUnder a heavy dose of Weakness and golden apple, we managed to perform our first discussion with Patient V. It was a lot to--ah--here, I'll stick the recording into the jukebox so you can hear it for yourself.",
+                "[Various Static Noises]\n\nHathson: Can you understand what I am saying?\n\nPV: y-yes, sir.\n\nHathson: Start from when you first saw the creature. Or was it multiple?\n\nPV: m-m-many.",
+                "Hathson: What did they look like?\n\nPV: purple... all over. [Long Pause] the skin--it was--moving.\n\nHathson: Did it resemble any known creatures?\n\nPV: yes. it was like--a herd. of sheep. it's face... had--uh--melted. or something.",
+                "Hathson: Did you say \"melted?\"\n\nPV: it only had one eye. i saw it. it looked s-s-straight at me.\nPV: it's wool was wet and hard.\n\nHathson: Did they attack you?",
+                "PV: n--no it... was just walking around. i got too close and it... felt like i was being sucked into myself.\nPV: the... sheep walked away. like nothing happened.\n\nHathson: That's all we need to know. Thank you. Get some rest.\n[End of Transcript]"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

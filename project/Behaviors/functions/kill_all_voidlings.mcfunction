@@ -1,0 +1,1 @@
+execute @e ~ ~ ~ execute @s[tag=voidling] ~ ~ ~ kill @s

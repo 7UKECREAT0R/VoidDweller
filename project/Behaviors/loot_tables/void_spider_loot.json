@@ -1,0 +1,48 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 0,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:fermented_spider_eye",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "voiddweller:pernicious_chunk",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_lore",
+              "lore": [
+                "Poisons all nearby non-void",
+                "entities whilst in inventory."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "author": "Unknown Author",
+              "title": "12-2-59",
+              "pages": [
+                "[12-2-59 CPA v46.1]\n[Attempt to translate...]\nSpiders, when infected, are constantly hostile. Their poison has been amplified to indiscernible amounts, and every part of their bodies begin to contort and ferment. Their eyes no longer seem functional,",
+                "though they are still able to accurately track anything they see. A curious effect that has been seen repeatedly from void creatures. The flesh from Void Spiders consistently fires microscopic spores at any nearby creature that is also not infected by the",
+                "void. The supply never seems to run out. I have accelerated this information to the Alpha crew; perhaps it could be used as some kind of energy source.\n[End of Transcript]"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
