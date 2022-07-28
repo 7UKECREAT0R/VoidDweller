@@ -29,7 +29,7 @@ Use new, powerful loot dropped from void mobs to change up the game, inflicting 
 Besides having a block which can break bedrock, VoidDweller also adds four other blocks for construction. 
 
 > **Note**<br />
-> Lore drops inspired by Risk of Rain 2.
+> Lore drops and concept of item effects inspired by Risk of Rain 2.
 
 ![banner-technical](https://user-images.githubusercontent.com/43343249/181403060-a114a8ab-6a73-4a6f-bfeb-d192f177d5ef.png)
 
